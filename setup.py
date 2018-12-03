@@ -15,8 +15,8 @@ with open('HISTORY.rst', 'rb') as history_file:
     history = history_file.read().decode('utf8')
 
 requirements = [
-    "marshmallow>=2.6.0",
-    "python-dateutil>=2.5.0",
+    "marshmallow>=3.0.0rc3",
+    "python-dateutil>=2.7.0",
     "pymongo>=3.7.0",
 ]
 
