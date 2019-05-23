@@ -59,8 +59,7 @@ class List(BaseDataObject, list):
         return ret
 
     def __repr__(self):
-        return '<object %s.%s(%s)>' % (
-            self.__module__, self.__class__.__name__, list(self))
+        return f'<{self.__class__.__name__}({list(self)})>'
 
     def set_modified(self):
         self._modified = True
@@ -122,8 +121,7 @@ class Reference:
     # TODO replace no_data by `exists` function
 
     def __repr__(self):
-        return '<object %s.%s(document=%s, pk=%r)>' % (
-            self.__module__, self.__class__.__name__, self.document_cls.__name__, self.pk)
+        return f'<{self.__class__.__name__}(document={self.document_cls.__name__}, pk={self.pk})>'
 
     def __eq__(self, other):
         if isinstance(other, self.document_cls):

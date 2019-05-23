@@ -144,8 +144,7 @@ class DocumentImplementation(BaseDataObject, Implementation, metaclass=MetaDocum
         self._data = self.DataProxy(kwargs)
 
     def __repr__(self):
-        return '<object Document %s.%s(%s)>' % (
-            self.__module__, self.__class__.__name__, dict(self._data.items()))
+        return f'<{self.__class__.__name__}({dict(self._data.items())})>'
 
     def __eq__(self, other):
         from .data_objects import Reference
